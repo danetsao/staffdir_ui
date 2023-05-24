@@ -55,6 +55,7 @@ angular.module('ualib.staffdir')
                         StaffFactory.byId().get({id: scope.person})
                             .$promise.then(function(data){
                                 scope.staffPerson = data.list[0];
+                                scope.staffPerson.firstname = "Dane";
                             }, function(){
                                 console.log('Staffdir Error -- Come on, put in proper error handling already');
                             });
